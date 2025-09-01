@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-École Noumga - Nous vous accompagnons vers votre permis de conduire</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-car"></i>
+                <div class="logo-text">
+                    <span><span class="logo-orange">Auto-École</span> <span class="logo-highlight">Noumga</span></span>
+                    <div class="logo-slogan">Nous vous accompagnons vers la réussite</div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#tarifs" class="nav-link">Nos Formules</a></li>
+                <li><a href="#contact" class="nav-link">Nous Contacter</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Nous vous aidons à obtenir votre permis de conduire en toute confiance</h1>
+            <p>Chez Auto-École Noumga, votre réussite est notre priorité. Laissez-nous vous accompagner dans cette étape importante de votre vie.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Commencer mon inscription</a>
+                <a href="#tarifs" class="btn btn-secondary">Découvrir nos formules</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <i class="fas fa-car-side"></i>
+        </div>
+    </section>
+
+    <!-- Fiche de Renseignement Section -->
+    <section id="tarifs" class="pricing">
+        <div class="container">
+            <h2>Choisissez la formation qui vous convient</h2>
+            <p class="section-intro">Nous avons conçu différentes formules pour s'adapter à votre rythme et vos besoins. Découvrez celle qui vous correspond le mieux :</p>
+            <div class="inscription-info">
+                <p class="inscription-fee"><strong>Frais d'inscription : seulement 10 000 FCFA</strong></p>
+            </div>
+            
+            <div class="pricing-table-container">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Désignation</th>
+                            <th>Durée</th>
+                            <th>Plage Horaire</th>
+                            <th>Prix</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Formation Normale</td>
+                            <td>2 mois</td>
+                            <td>30min de cours, 3 cours pratiques par semaine</td>
+                            <td>205 000 FCFA</td>
+                            <td>
+                                <button class="btn-choose" onclick="choisirFormation('01', 'Formation Normale', '2 mois', '30min de cours, 3 cours pratiques par semaine', '205 000 FCFA')">Choisir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Formation Accélérée</td>
+                            <td>30 jours</td>
+                            <td>30min de cours, 5 cours par semaine</td>
+                            <td>300 000 FCFA</td>
+                            <td>
+                                <button class="btn-choose" onclick="choisirFormation('02', 'Formation Accélérée', '30 jours', '30min de cours, 5 cours par semaine', '300 000 FCFA')">Choisir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Formation au Forfait</td>
+                            <td>1 mois</td>
+                            <td>1h de cours, 6 cours pratiques par semaine</td>
+                            <td>360 000 FCFA</td>
+                            <td>
+                                <button class="btn-choose" onclick="choisirFormation('03', 'Formation au Forfait', '1 mois', '1h de cours, 6 cours pratiques par semaine', '360 000 FCFA')">Choisir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>Recyclage Théorique & Pratique</td>
+                            <td>10 jours</td>
+                            <td>30min de cours pratique</td>
+                            <td>70 000 FCFA</td>
+                            <td>
+                                <button class="btn-choose" onclick="choisirFormation('04', 'Recyclage Théorique & Pratique', '10 jours', '30min de cours pratique', '70 000 FCFA')">Choisir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>05</td>
+                            <td>Conduite Accompagnée</td>
+                            <td>Pas de durée</td>
+                            <td>1h de cours</td>
+                            <td>7 000 FCFA</td>
+                            <td>
+                                <button class="btn-choose" onclick="choisirFormation('05', 'Conduite Accompagnée', 'Pas de durée', '1h de cours', '7 000 FCFA')">Choisir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>06</td>
+                            <td>Formation avec Permis International</td>
+                            <td>45 jours</td>
+                            <td>1h de cours, 5 cours pratiques par semaine</td>
+                            <td>240 000 FCFA</td>
+                            <td>
+                                <button class="btn-choose" onclick="choisirFormation('06', 'Formation avec Permis International', '45 jours', '1h de cours, 5 cours pratiques par semaine', '240 000 FCFA')">Choisir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>07</td>
+                            <td>Capacité</td>
+                            <td>1 mois</td>
+                            <td>3 cours pratiques par semaine</td>
+                            <td>100 000 FCFA</td>
+                            <td>
+                                <button class="btn-choose" onclick="choisirFormation('07', 'Capacité', '1 mois', '3 cours pratiques par semaine', '100 000 FCFA')">Choisir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>08</td>
+                            <td>Permis Moto (A)</td>
+                            <td>1 mois</td>
+                            <td>2 cours pratiques par semaine</td>
+                            <td>75 000 FCFA</td>
+                            <td>
+                                <button class="btn-choose" onclick="choisirFormation('08', 'Permis Moto (A)', '1 mois', '2 cours pratiques par semaine', '75 000 FCFA')">Choisir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>09</td>
+                            <td>Formation Prestige</td>
+                            <td>1 mois</td>
+                            <td>30min de cours théorique et cours pratiques par semaine</td>
+                            <td>300 000 FCFA</td>
+                            <td>
+                                <button class="btn-choose" onclick="choisirFormation('09', 'Formation Prestige', '1 mois', '30min de cours théorique et cours pratiques par semaine', '300 000 FCFA')">Choisir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Modalités de paiement -->
+            <div class="payment-info">
+                <h3><i class="fas fa-credit-card"></i> Comment régler votre formation</h3>
+                <div class="payment-options">
+                    <div class="payment-option">
+                        <span class="payment-number">1.</span>
+                        <div class="payment-details">
+                            <strong>1ère tranche :</strong> Vous payez 50% avant de commencer vos cours
+                        </div>
+                    </div>
+                    <div class="payment-option">
+                        <span class="payment-number">2.</span>
+                        <div class="payment-details">
+                            <strong>2ème tranche :</strong> Les 50% restants selon votre convenance
+                        </div>
+                    </div>
+                    <div class="payment-note">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Astuce :</strong> Si vous payez l'intégralité avant de commencer, vous bénéficiez d'une remise de 5% !
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Déroulement des cours -->
+            <div class="course-info">
+                <h3><i class="fas fa-graduation-cap"></i> Comment se déroulent vos cours</h3>
+                <div class="course-details">
+                    <div class="course-item">
+                        <span class="course-number">1.</span>
+                        <div class="course-content">
+                            <strong>Vos cours pratiques :</strong> Vous choisissez vos jours et heures selon votre disponibilité
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <span class="course-number">2.</span>
+                        <div class="course-content">
+                            <strong>Vos cours théoriques :</strong> Programme structuré pour votre réussite (pensez à apporter un cahier de 200 pages, un stylo bleu et un stylo rouge)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Nomenclature des pièces -->
+            <div class="documents-info">
+                <h3><i class="fas fa-file-alt"></i> Les documents dont vous aurez besoin pour votre examen</h3>
+                <div class="documents-list">
+                    <div class="document-item">
+                        <span class="document-number">1.</span>
+                        <div class="document-content">Une demande timbrée</div>
+                    </div>
+                    <div class="document-item">
+                        <span class="document-number">2.</span>
+                        <div class="document-content">2 photocopies de la CNI (une légalisée)</div>
+                    </div>
+                    <div class="document-item">
+                        <span class="document-number">3.</span>
+                        <div class="document-content">4 photos 4x4 couleur sur fond blanc</div>
+                    </div>
+                    <div class="document-item">
+                        <span class="document-number">4.</span>
+                        <div class="document-content">1 certificat médical</div>
+                    </div>
+                    <div class="document-item">
+                        <span class="document-number">5.</span>
+                        <div class="document-content">Frais de dossiers de l'examen : <strong>35 000 FCFA</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avantages Section -->
+    <section class="advantages">
+        <div class="container">
+            <h2>Pourquoi faire confiance à Auto-École Noumga ?</h2>
+            <p class="section-intro">Voici ce qui nous distingue et pourquoi nos élèves nous recommandent :</p>
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <i class="fas fa-trophy"></i>
+                    <h3>95% de nos élèves réussissent</h3>
+                    <p>Vous avez 95% de chances de réussir votre permis avec nous dès le premier passage</p>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>Des moniteurs à votre écoute</h3>
+                    <p>Nos instructeurs diplômés s'adaptent à votre rythme d'apprentissage</p>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>On s'adapte à votre emploi du temps</h3>
+                    <p>Choisissez vos créneaux de cours selon votre disponibilité</p>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-car-crash"></i>
+                    <h3>Vous apprenez sur des véhicules récents</h3>
+                    <p>Notre flotte moderne vous prépare aux conditions réelles de conduite</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Parlons de votre projet permis de conduire</h2>
+            <p class="contact-subtitle">Nous sommes là pour répondre à toutes vos questions et vous guider dans le choix de votre formation. N'hésitez pas à nous contacter !</p>
+            
+            <!-- Contact rapide -->
+            <div class="quick-contact">
+                <div class="quick-contact-item">
+                    <button type="button" id="whatsappBtn" class="btn-quick-contact btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="contact-text">
+                            <span class="contact-title">Écrivez-nous sur WhatsApp</span>
+                        </div>
+                    </button>
+                </div>
+                <div class="quick-contact-item">
+                    <button type="button" id="callBtn" class="btn-quick-contact btn-call">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-text">
+                            <span class="contact-title">Appelez-nous maintenant</span>
+                        </div>
+                    </button>
+                </div>
+                <div class="quick-contact-item">
+                    <button type="button" id="emailBtn" class="btn-quick-contact btn-email">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <span class="contact-title">Envoyez-nous un email</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-info-circle"></i> Où nous trouver</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>Mongonam, Chefferie<br>Après le marché Oyom-Abang<br>Yaoundé, Cameroun</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Téléphones</h4>
+                                <p>+237 696 022 054<br>+237 675 922 286</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>albertnoumga@yahoo.fr</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horaires d'ouverture</h4>
+                                <p>Lundi - Vendredi: 9h00 - 19h00<br>Samedi: 9h00 - 17h00<br>Dimanche: Fermé</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-graduation-cap"></i> Ce que vous obtenez avec nous</h3>
+                        <ul class="advantages-list">
+                            <li><i class="fas fa-check-circle"></i> 95% de chances de réussir dès le premier passage</li>
+                            <li><i class="fas fa-check-circle"></i> Des moniteurs qui s'adaptent à votre rythme</li>
+                            <li><i class="fas fa-check-circle"></i> Vous apprenez sur des véhicules récents</li>
+                            <li><i class="fas fa-check-circle"></i> Vos horaires respectés</li>
+                            <li><i class="fas fa-check-circle"></i> Un accompagnement personnalisé</li>
+                            <li><i class="fas fa-check-circle"></i> L'expérience de plus de 20 ans à votre service</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <h3><i class="fas fa-paper-plane"></i> Parlez-nous de votre projet</h3>
+                        <p class="form-description">Dites-nous ce que vous recherchez et nous vous recontacterons rapidement avec une proposition personnalisée</p>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nom">Comment vous appelez-vous ? *</label>
+                                <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Votre numéro de téléphone *</label>
+                                <input type="tel" id="telephone" name="telephone" placeholder="Pour vous joindre rapidement" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Votre adresse email *</label>
+                            <input type="email" id="email" name="email" placeholder="Pour vous envoyer les informations" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="formation">Quelle formation vous intéresse ? *</label>
+                            <select id="formation" name="formation" required>
+                                <option value="">Dites-nous ce qui vous convient</option>
+                                <option value="formation-normale">Formation Normale (2 mois)</option>
+                                <option value="formation-acceleree">Formation Accélérée (30 jours)</option>
+                                <option value="formation-forfait">Formation au Forfait (1 mois)</option>
+                                <option value="recyclage">Recyclage Théorique & Pratique</option>
+                                <option value="conduite-accompagnee">Conduite Accompagnée</option>
+                                <option value="permis-international">Formation avec Permis International</option>
+                                <option value="capacite">Capacité</option>
+                                <option value="permis-moto">Permis Moto (A)</option>
+                                <option value="formation-prestige">Formation Prestige</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Avez-vous des questions particulières ?</label>
+                            <textarea id="message" name="message" placeholder="Parlez-nous de vos besoins, vos disponibilités, vos préoccupations..." rows="4"></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Je veux être contacté(e)
+                            </button>
+                            <p class="form-note">* Champs obligatoires</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="logo-orange">Auto-École</span> <span class="logo-highlight">Noumga</span></h3>
+                    <p class="footer-slogan">Nous vous accompagnons vers la réussite</p>
+                    <p>Votre partenaire de confiance pour obtenir votre permis de conduire depuis plus de 20 ans. Nous mettons tout en œuvre pour votre succès.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation rapide</h4>
+                    <ul>
+                        <li><a href="#accueil">Découvrir notre école</a></li>
+                        <li><a href="#tarifs">Choisir ma formation</a></li>
+                        <li><a href="#contact">Être contacté(e)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Auto-École Noumga. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
