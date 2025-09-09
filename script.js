@@ -757,3 +757,29 @@ function animateContactSection() {
 
 // Initialize contact section animation
 document.addEventListener('DOMContentLoaded', animateContactSection);
+
+// Hero Background Slideshow
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+
+function initHeroSlideshow() {
+    if (slides.length > 0) {
+        // Show first slide
+        slides[0].classList.add('active');
+        
+        // Start slideshow
+        setInterval(() => {
+            // Remove active class from current slide
+            slides[currentSlide].classList.remove('active');
+            
+            // Move to next slide
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            // Add active class to new slide
+            slides[currentSlide].classList.add('active');
+        }, 4000); // Change image every 4 seconds
+    }
+}
+
+// Initialize slideshow when DOM is loaded
+document.addEventListener('DOMContentLoaded', initHeroSlideshow);
